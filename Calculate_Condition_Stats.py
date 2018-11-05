@@ -297,7 +297,7 @@ def CalculateConditionStats(POINT,CONTINUOUS):
                             row[17] = 1
                             cursor.updateRow(row)
 
-            print("\nPOINT Condition Stats Applied")
+            print("\nPOINT Condition Stats Applied\n")
 
             edit.stopOperation()
 
@@ -320,9 +320,11 @@ def CalculateConditionStats(POINT,CONTINUOUS):
             logging.debug(msgs)
             logging.debug(datetime.datetime.now())
         
-    ContinuousLayer = arcpy.MakeFeatureLayer_management(CONTINUOUS,"ContinuousLay")
+    ContinuousLayer = arcpy.MakeFeatureLayer_management(CONTINUOUS,"ContinuousLay2")
     CalculateChartCondLine(ContinuousLayer)
-    PointLayer = arcpy.MakeFeatureLayer_management(POINT,"PointLayer")
+    arcpy.Delete_management(ContinuousLayer)
+    PointLayer = arcpy.MakeFeatureLayer_management(POINT,"PointLayer2")
     CalculateChartCondPoint(PointLayer)
+    arcpy.Delete_management(PointLayer)
 
 

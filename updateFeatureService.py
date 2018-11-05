@@ -8,7 +8,6 @@ import updatewebmap
 import datetime
 import create_flow_direction
 import import_flood_events
-print "HELLO"
 
 # Create log file
 dirname = os.path.dirname(os.path.realpath(__file__))
@@ -83,7 +82,7 @@ def processArea(ukCoordSystem,lstAreasToUpload):
         # update feature service
         updatewebmap.UpdateFeatureService(areaFldr,areaName)
 
-        print (areaName + " PROCESS STARTED: " + str(datetime.datetime.now()))
+        print (areaName + " PROCESS ENDED: " + str(datetime.datetime.now()))
         logging.debug(areaName + " PROCESS ENDED: " + str(datetime.datetime.now()))
 
     return True

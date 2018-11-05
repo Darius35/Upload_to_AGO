@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ba731db2-c475-4eff-853e-0850d1e13a3c</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>updateFeatureService.py</StartupFile>
+    <StartupFile>updateFeatureService_UI.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -12,6 +12,8 @@
     <Name>updateWebMaps</Name>
     <RootNamespace>updateWebMaps</RootNamespace>
     <InterpreterId>Global|VisualStudio|Python 2.7 New</InterpreterId>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,6 +32,7 @@
     <Compile Include="import_flood_events.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="updateFeatureService_UI.py" />
     <Compile Include="updatewebmap.py">
       <SubType>Code</SubType>
     </Compile>
