@@ -1,0 +1,1 @@
+"C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\python.exe" "C:\Users\dariusmirdamadi\source\repos\updateWebMaps\updateWebMaps\updateFeatureService.py"
