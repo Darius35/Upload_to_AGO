@@ -8,6 +8,8 @@ import updatewebmap
 import datetime
 import create_flow_direction
 import import_flood_events
+print ("Hello")
+
 
 # Create log file
 dirname = os.path.dirname(os.path.realpath(__file__))
