@@ -31,3 +31,130 @@ DEBUG:root:Calculating chart condition stats..
 DEBUG:root:Updating Chart Condition Stats
 DEBUG:root:AREA9 PROCESS ENDED: 2018-11-05 15:13:07.214520
 DEBUG:root:PROCESS COMPLETE: 2018-11-05 15:13:07.221516
+DEBUG:root:AREA9 PROCESS STARTED: 2018-11-13 16:13:48.936070
+DEBUG:root:Importing flood events...
+DEBUG:root:PYTHON ERRORS:
+Traceback info:
+  File "C:\Users\dariusmirdamadi\source\repos\updateWebMaps\updateWebMaps\import_flood_events.py", line 62, in ImportFloodEvents
+    arcpy.TruncateTable_management(floodFc)
+
+Error Info:
+Failed to execute. Parameters are not valid.
+ERROR 000187: Only supports Geodatabase tables and feature classes
+Failed to execute (TruncateTable).
+
+DEBUG:root:ArcPy ERRORS:
+Failed to execute. Parameters are not valid.
+ERROR 000187: Only supports Geodatabase tables and feature classes
+Failed to execute (TruncateTable).
+
+
+DEBUG:root:2018-11-13 16:14:18.316330
+DEBUG:root:AREA9 PROCESS ENDED: 2018-11-13 16:14:18.322320
+DEBUG:root:PROCESS COMPLETE: 2018-11-13 16:14:18.328455
+DEBUG:root:AREA9 PROCESS STARTED: 2018-11-13 16:29:54.682460
+DEBUG:root:Importing flood events...
+DEBUG:root:PYTHON ERRORS:
+Traceback info:
+  File "C:\Users\dariusmirdamadi\source\repos\updateWebMaps\updateWebMaps\import_flood_events.py", line 78, in ImportFloodEvents
+    arcpy.Append_management(floodPoints,floodFc,"NO_TEST",fieldmappings)
+
+Error Info:
+ERROR 001156: Failed on input OID 206, could not write value ' ' to output field Cleared_D
+Failed to execute (Append).
+
+DEBUG:root:ArcPy ERRORS:
+ERROR 001156: Failed on input OID 206, could not write value ' ' to output field Cleared_D
+Failed to execute (Append).
+
+
+DEBUG:root:2018-11-13 16:30:09.398298
+DEBUG:root:AREA9 PROCESS ENDED: 2018-11-13 16:30:09.412283
+DEBUG:root:PROCESS COMPLETE: 2018-11-13 16:30:09.428280
+DEBUG:root:AREA9 PROCESS STARTED: 2018-11-14 08:43:14.112443
+DEBUG:root:Importing flood events...
+DEBUG:root:PYTHON ERRORS:
+Traceback info:
+  File "C:\Users\dariusmirdamadi\source\repos\updateWebMaps\updateWebMaps\import_flood_events.py", line 62, in ImportFloodEvents
+    outCSV = EditCSV(eventsCsv)
+
+Error Info:
+name 'np' is not defined
+DEBUG:root:ArcPy ERRORS:
+
+
+DEBUG:root:2018-11-14 08:47:04.959752
+DEBUG:root:AREA9 PROCESS ENDED: 2018-11-14 08:47:04.966745
+DEBUG:root:PROCESS COMPLETE: 2018-11-14 08:47:04.972743
+DEBUG:root:AREA9 PROCESS STARTED: 2018-11-14 08:50:54.414520
+DEBUG:root:Importing flood events...
+DEBUG:root:PYTHON ERRORS:
+Traceback info:
+  File "C:\Users\dariusmirdamadi\source\repos\updateWebMaps\updateWebMaps\import_flood_events.py", line 63, in ImportFloodEvents
+    outCSV = EditCSV(eventsCsv)
+
+Error Info:
+labels ['Initial Action' 'Secondary Action'] not contained in axis
+DEBUG:root:ArcPy ERRORS:
+
+
+DEBUG:root:2018-11-14 08:55:37.952944
+DEBUG:root:AREA9 PROCESS ENDED: 2018-11-14 08:55:37.961956
+DEBUG:root:PROCESS COMPLETE: 2018-11-14 08:55:37.970934
+DEBUG:root:AREA9 PROCESS STARTED: 2018-11-14 10:18:15.241607
+DEBUG:root:Importing flood events...
+DEBUG:root:PYTHON ERRORS:
+Traceback info:
+  File "C:\Users\dariusmirdamadi\source\repos\updateWebMaps\updateWebMaps\import_flood_events.py", line 77, in ImportFloodEvents
+    arcpy.Append_management(floodPoints,floodFc,"NO_TEST",fieldmappings)
+
+Error Info:
+ERROR 001156: Failed on input OID 206, could not write value ' ' to output field Cleared_D
+Failed to execute (Append).
+
+DEBUG:root:ArcPy ERRORS:
+ERROR 001156: Failed on input OID 206, could not write value ' ' to output field Cleared_D
+Failed to execute (Append).
+
+
+DEBUG:root:2018-11-14 10:21:09.976578
+DEBUG:root:AREA9 PROCESS ENDED: 2018-11-14 10:21:09.983573
+DEBUG:root:PROCESS COMPLETE: 2018-11-14 10:21:09.989571
+DEBUG:root:AREA9 PROCESS STARTED: 2018-11-14 11:45:25.904066
+DEBUG:root:Importing flood events...
+DEBUG:root:PYTHON ERRORS:
+Traceback info:
+  File "C:\Users\dariusmirdamadi\source\repos\updateWebMaps\updateWebMaps\import_flood_events.py", line 77, in ImportFloodEvents
+    arcpy.Append_management(floodPoints,floodFc,"NO_TEST",fieldmappings)
+
+Error Info:
+ERROR 001156: Failed on input OID 206, could not write value ' ' to output field Cleared_D
+Failed to execute (Append).
+
+DEBUG:root:ArcPy ERRORS:
+ERROR 001156: Failed on input OID 206, could not write value ' ' to output field Cleared_D
+Failed to execute (Append).
+
+
+DEBUG:root:2018-11-14 11:48:40.941516
+DEBUG:root:AREA9 PROCESS ENDED: 2018-11-14 11:48:40.947512
+DEBUG:root:PROCESS COMPLETE: 2018-11-14 11:48:40.954508
+DEBUG:root:AREA9 PROCESS STARTED: 2018-11-14 15:18:26.801107
+DEBUG:root:Importing flood events...
+DEBUG:root:PYTHON ERRORS:
+Traceback info:
+  File "C:\Users\dariusmirdamadi\source\repos\updateWebMaps\updateWebMaps\import_flood_events.py", line 63, in ImportFloodEvents
+    outCSV = EditCSV(eventsCsv)
+
+Error Info:
+labels ['Initial Action' 'Secondary Action'] not contained in axis
+DEBUG:root:ArcPy ERRORS:
+
+
+DEBUG:root:2018-11-14 15:20:01.211781
+DEBUG:root:AREA9 PROCESS ENDED: 2018-11-14 15:20:01.217776
+DEBUG:root:PROCESS COMPLETE: 2018-11-14 15:20:01.223771
+DEBUG:root:AREA9 PROCESS STARTED: 2018-11-14 15:20:57.919768
+DEBUG:root:Importing flood events...
+DEBUG:root:AREA9 PROCESS ENDED: 2018-11-14 15:23:20.082919
+DEBUG:root:PROCESS COMPLETE: 2018-11-14 15:23:20.086917

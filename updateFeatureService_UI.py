@@ -8,7 +8,6 @@ import updatewebmap
 import datetime
 import create_flow_direction
 import import_flood_events
-print ("Hello")
 
 
 # Create log file

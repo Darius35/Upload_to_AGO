@@ -5,6 +5,7 @@ import sys
 import traceback
 import datetime
 import pandas as pd
+import numpy as np
 
 def ImportFloodEvents(eventsCsv,floodFc,ukGrid):
     
@@ -40,12 +41,10 @@ def ImportFloodEvents(eventsCsv,floodFc,ukGrid):
         # Remove action fields from csv (values are over 255 chars)
         dirname = os.path.dirname(os.path.abspath(eventsCsv))
         outputfile = os.path.join(dirname,"FloodEdited.csv")
-        df = pd.read_csv(eventsCsv)
+        df = pd.read_csv(eventsCsv,skipinitialspace=True)
         dfs = df.drop(['Initial Action','Secondary Action'], axis = 1)
         dfs.to_csv(outputfile)
-
-        #df= pd.read_csv("sample_data.csv", usecols =[i for i in cols if i != 'Initial Action'])
-        
+      
         return outputfile
 
     try:
@@ -61,12 +60,14 @@ def ImportFloodEvents(eventsCsv,floodFc,ukGrid):
         outCSV = EditCSV(eventsCsv)
 
         # Create points from csv
-        floodPoints = "C:\Temp\FloodPoints.shp"
-        if arcpy.Exists(floodPoints) == True:
-            arcpy.Delete_management(floodPoints)
+        #floodPoints = "C:\Temp\FloodPoints.shp"
+        #if arcpy.Exists(floodPoints) == True:
+        #    arcpy.Delete_management(floodPoints)
         
-        arcpy.env.workspace = r"C:\Temp"
-        arcpy.management.XYTableToPoint(outCSV,"FloodPoints.shp","Easting","Northing","",ukGrid)
+        #arcpy.env.workspace = r"C:\Temp"
+        #arcpy.management.XYTableToPoint(outCSV,"FloodPoints.shp","Easting","Northing","",ukGrid)
+
+        floodPoints = arcpy.MakeXYEventLayer_management(outCSV,"Easting","Northing","floodPoints",ukGrid)
 
         # Add output field to field mappings object
         fieldmappings = SetFieldMappings(floodPoints)
