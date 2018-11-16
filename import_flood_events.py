@@ -6,6 +6,7 @@ import traceback
 import datetime
 import pandas as pd
 import numpy as np
+print ("Hello")
 
 def ImportFloodEvents(eventsCsv,floodFc,ukGrid):
     
