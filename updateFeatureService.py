@@ -65,7 +65,7 @@ def processArea(ukCoordSystem,lstAreasToUpload):
         floodFolder = os.path.join(areaFldr,"FLOOD")
         if os.path.isdir(floodFolder) == True:
             floodFiles = os.listdir(floodFolder)
-            floodFile = ""
+            floodFile = "No File.csv"
             for fl in floodFiles:
                 if ".csv" in fl:
                     floodFile = fl

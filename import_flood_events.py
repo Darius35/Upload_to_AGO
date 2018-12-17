@@ -17,7 +17,7 @@ def ImportFloodEvents(eventsCsv,floodFc,ukGrid):
 
         fldMap_Reported = arcpy.FieldMap()
         fldMap_Reported.addInputField(floodPoints,"Reported")
-        reported = fldMap_Reported.outputField
+        reported = fldMap_Reportefd.outputField
         reported.name = "Reported_D"
         fldMap_Reported.outputField = reported
         fieldmappings.addFieldMap(fldMap_Reported)
@@ -35,6 +35,37 @@ def ImportFloodEvents(eventsCsv,floodFc,ukGrid):
         cleared.name = "Cleared_D"
         fldMap_Cleared.outputField = cleared
         fieldmappings.addFieldMap(fldMap_Cleared)
+
+        fldMap_FID = arcpy.FieldMap()
+        fldMap_FID.addInputField(floodPoints,"Flood Event ID")
+        fid = fldMap_FID.outputField
+        fid.name = "Flood_Even"
+        fldMap_FID.outputField = fid
+        fieldmappings.addFieldMap(fldMap_FID)
+
+        fldMap_HAPMS = arcpy.FieldMap()
+        fldMap_HAPMS.addInputField(floodPoints,"HAPMS Section")
+        hapms = fldMap_HAPMS.outputField
+        hapms.name = "HAPMS_Sect"
+        fldMap_HAPMS.outputField = hapms
+        fieldmappings.addFieldMap(fldMap_HAPMS)
+
+        fldMap_CWay = arcpy.FieldMap()
+        fldMap_CWay.addInputField(floodPoints,"Carriageway Type")
+        carriageway = fldMap_CWay.outputField
+        carriageway.name = "Carriagewa"
+        fldMap_CWay.outputField = carriageway
+        fieldmappings.addFieldMap(fldMap_CWay)
+
+        fldMap_FloodSev = arcpy.FieldMap()
+        fldMap_FloodSev.addInputField(floodPoints,"Flood Severity Index")
+        floodsev = fldMap_FloodSev.outputField
+        floodsev.name = "Flood_Seve"
+        fldMap_FloodSev.outputField = floodsev
+        fieldmappings.addFieldMap(fldMap_FloodSev)
+
+        
+
 
         return fieldmappings
     
