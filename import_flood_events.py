@@ -17,7 +17,7 @@ def ImportFloodEvents(eventsCsv,floodFc,ukGrid):
 
         fldMap_Reported = arcpy.FieldMap()
         fldMap_Reported.addInputField(floodPoints,"Reported")
-        reported = fldMap_Reportefd.outputField
+        reported = fldMap_Reported.outputField
         reported.name = "Reported_D"
         fldMap_Reported.outputField = reported
         fieldmappings.addFieldMap(fldMap_Reported)
@@ -63,8 +63,6 @@ def ImportFloodEvents(eventsCsv,floodFc,ukGrid):
         floodsev.name = "Flood_Seve"
         fldMap_FloodSev.outputField = floodsev
         fieldmappings.addFieldMap(fldMap_FloodSev)
-
-        
 
 
         return fieldmappings
